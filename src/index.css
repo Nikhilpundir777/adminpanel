@@ -1,0 +1,149 @@
+/* Import Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* App-wide global styles */
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Inter', sans-serif; /* A nice modern font */
+  background-color: #f4f5f7;
+}
+
+/* Center content in the middle of the page */
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Form styling */
+.form-container {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.form-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+}
+
+.form-input:focus {
+  border-color: #6366f1; /* Tailwind Indigo */
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.5);
+}
+
+.form-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #6366f1; /* Tailwind Indigo */
+  color: #fff;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: #4f46e5; /* Darker Indigo */
+}
+
+.form-error {
+  color: #ef4444; /* Tailwind Red */
+  font-size: 0.875rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Table styling */
+.table-container {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+  max-width: 800px;
+  width: 100%;
+}
+
+.table-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+.table th, .table td {
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f9fafb;
+  font-weight: 600;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f1f5f9;
+}
+
+/* Buttons for actions in Employee Management */
+.table-button {
+  padding: 0.5rem 1rem;
+  background-color: #10b981; /* Tailwind Emerald */
+  color: #fff;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.table-button:hover {
+  background-color: #059669; /* Darker Emerald */
+}
+
+.table-button.delete {
+  background-color: #ef4444; /* Tailwind Red */
+}
+
+.table-button.delete:hover {
+  background-color: #dc2626;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form-container, .table-container {
+    padding: 1.5rem;
+    max-width: 95%;
+  }
+
+  .table th, .table td {
+    padding: 0.5rem;
+  }
+}
